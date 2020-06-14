@@ -9,7 +9,7 @@ data:
       
 cleaning:
     pre_split_cleaning:
-      nan: interpolate
+      nan: median
     post_split_cleaning:
       normalize: overall min max 
 
