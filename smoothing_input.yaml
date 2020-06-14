@@ -1,6 +1,6 @@
 ---
 data:
-    data_path: ../df_cn_spectra_pure_binary.csv
+    data_path: df_cn_spectra_pure_binary.csv
     target_col_name: cn_coalesced
     index_col_name: name
     plot:
@@ -12,15 +12,15 @@ data:
       
 cleaning:
     pre_split_cleaning:
-      nan: interpolate
+      nan: median
     post_split_cleaning:
       normalize: overall min max 
 
 validation:
     holdout_fraction: 0.2
+    parameters_file: narrow_search.yaml
     Kfold: 
       nsplits: 5
-    metric: MAE
     random_seed: 42
     
 

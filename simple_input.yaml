@@ -28,16 +28,16 @@ transformations:
     transform_names:
         - No_transform
         - PCA_all
-   #     - PCA_5
-   #     - smoothing_50
+        - PCA_5
+        - smoothing_50
     feature_transformations:
         - "None"
         - PCA:
             number: all    
-  #      - PCA:
-  #          number: 5   
-   #     - smoothing:
- #           n_points: 50
+        - PCA:
+            number: 5   
+        - smoothing:
+            n_points: 50
 
 models:
   - dummy_average
@@ -45,6 +45,5 @@ models:
   - ElasticNet
   - RandomForest
   - AdaBoost
-#  - LinearRegression
-#  - TPOT
+  - TPOT
   
