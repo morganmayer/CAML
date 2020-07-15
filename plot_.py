@@ -389,6 +389,7 @@ def bar_performances_by_transform(train_performances, test_performances, model_n
         name of target column in dataframes
     path : string
         path where png file will be stored'''
+        
     transform_names = [name.replace("_"," ") for name in transform_names]
     
     # set width of bar

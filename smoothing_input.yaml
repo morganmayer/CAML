@@ -1,6 +1,6 @@
 ---
 data:
-    data_path: df_cn_spectra_pure_binary.csv
+    data_path: ../df_cn_spectra_pure_binary.csv
     target_col_name: cn_coalesced
     index_col_name: name
     plot:
@@ -27,11 +27,11 @@ validation:
 transformations:
 
     transform_names:
-        - smoothing_150
-        - smoothing_100
-        - smoothing_50
-        - smoothing_25
-        - No_transform
+        - "averaged 150 pts"
+        - "averaged 100 pts"
+        - "averaged 50 pts"
+        - "averaged 25 pts"
+        - "No transform"
 
     feature_transformations:
     

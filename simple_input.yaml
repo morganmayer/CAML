@@ -1,6 +1,6 @@
 ---
 data:
-    data_path: df_cn_spectra_pure_binary.csv
+    data_path: ../df_cn_spectra_pure_binary.csv
     target_col_name: cn_coalesced
     index_col_name: name
     plot:
@@ -26,24 +26,24 @@ validation:
     
 transformations:
     transform_names:
-        - No_transform
-        - PCA_all
-        - PCA_5
-        - smoothing_50
+        - "No transform"
+        - "PCA (all PC's)"
+    #    - PCA_5
+    #    - smoothing_50
     feature_transformations:
         - "None"
         - PCA:
             number: all    
-        - PCA:
-            number: 5   
-        - smoothing:
-            n_points: 50
+       # - PCA:
+       #     number: 5   
+      #  - smoothing:
+      #      n_points: 50
 
 models:
   - dummy_average
-  - Lasso
-  - ElasticNet
-  - RandomForest
-  - AdaBoost
-  - TPOT
+ # - Lasso
+  #- ElasticNet
+ # - RandomForest
+ # - AdaBoost
+ # - TPOT
   

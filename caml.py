@@ -16,7 +16,6 @@ from scipy.signal import find_peaks
 # caml modules
 import clean
 import feature_engineering as feat
-import models as mod
 import plot_ as plot_
 
 from sklearn.model_selection import train_test_split
@@ -46,13 +45,16 @@ from sklearn.ensemble import AdaBoostRegressor
 
 from mpl_toolkits.mplot3d import Axes3D
 
+#import collections
+#import multiprocessing
+
 
 if __name__ == '__main__':
     
     # for testing, removes old request folders
-    for fname in os.listdir(os.getcwd()):
-        if fname.startswith("request"):
-            shutil.rmtree(os.path.join(os.getcwd(), fname))
+  #  for fname in os.listdir(os.getcwd()):
+   #     if fname.startswith("request"):
+  #          shutil.rmtree(os.path.join(os.getcwd(), fname))
                 
     parser = argparse.ArgumentParser()
     parser.add_argument('input_file', type=str,
@@ -97,7 +99,6 @@ if __name__ == '__main__':
     # put copy of parameter file into output folder    
     shutil.copy(parameters_file, path) 
 
-        
     target = data["target_col_name"]
     seed = validation["random_seed"]
     
@@ -264,7 +265,7 @@ if __name__ == '__main__':
             
         else:
             raise ValueError("Not valid transformation")
-            
+
         scaler_objects.append(scaler)
         df_trains_transformed.append(df_train_transformed)
         df_tests_transformed.append(df_test_transformed)
